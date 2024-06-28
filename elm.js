@@ -5641,7 +5641,7 @@ var $author$project$Main$view = function (model) {
 						_List_Nil,
 						_List_fromArray(
 							[
-								$elm$html$Html$text('window.inner Size')
+								$elm$html$Html$text('window.inner Size: meta viewport width=device-width')
 							])),
 						A2(
 						$elm$html$Html$p,
