@@ -14680,6 +14680,10 @@ var $author$project$View$footerEl = F2(
 							[
 								$mdgriffith$elm_ui$Element$text(
 								$elm$core$Debug$toString(model.device._class)),
+								$mdgriffith$elm_ui$Element$text(
+								'width' + $elm$core$Debug$toString(model.viewport_.viewport.width)),
+								$mdgriffith$elm_ui$Element$text(
+								'height' + $elm$core$Debug$toString(model.viewport_.viewport.height)),
 								$author$project$View$navLink(
 								{
 									label: $mdgriffith$elm_ui$Element$text('PRIVACY POLICY'),
