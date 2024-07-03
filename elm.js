@@ -14128,6 +14128,49 @@ var $mdgriffith$elm_ui$Element$Font$color = function (fontColor) {
 			'color',
 			fontColor));
 };
+var $elm$html$Html$a = _VirtualDom_node('a');
+var $elm$html$Html$Attributes$href = function (url) {
+	return A2(
+		$elm$html$Html$Attributes$stringProperty,
+		'href',
+		_VirtualDom_noJavaScriptUri(url));
+};
+var $author$project$View$customLink = F3(
+	function (url, label, attr) {
+		return A2(
+			$mdgriffith$elm_ui$Element$el,
+			attr,
+			$mdgriffith$elm_ui$Element$html(
+				A2(
+					$elm$html$Html$a,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$href(url)
+						]),
+					_List_fromArray(
+						[
+							$elm$html$Html$text(label)
+						]))));
+	});
+var $elm$html$Html$Attributes$target = $elm$html$Html$Attributes$stringProperty('target');
+var $author$project$View$customNewTabLink = F3(
+	function (url, label, attr) {
+		return A2(
+			$mdgriffith$elm_ui$Element$el,
+			attr,
+			$mdgriffith$elm_ui$Element$html(
+				A2(
+					$elm$html$Html$a,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$href(url),
+							$elm$html$Html$Attributes$target('_blank')
+						]),
+					_List_fromArray(
+						[
+							$elm$html$Html$text(label)
+						]))));
+	});
 var $mdgriffith$elm_ui$Element$fillPortion = $mdgriffith$elm_ui$Internal$Model$Fill;
 var $mdgriffith$elm_ui$Internal$Model$ContentInfo = {$: 2};
 var $mdgriffith$elm_ui$Internal$Model$Describe = function (a) {
@@ -14273,12 +14316,6 @@ var $mdgriffith$elm_ui$Element$focused = function (decs) {
 			0,
 			$mdgriffith$elm_ui$Internal$Model$unwrapDecorations(decs)));
 };
-var $elm$html$Html$Attributes$href = function (url) {
-	return A2(
-		$elm$html$Html$Attributes$stringProperty,
-		'href',
-		_VirtualDom_noJavaScriptUri(url));
-};
 var $elm$html$Html$Attributes$rel = _VirtualDom_attribute('rel');
 var $mdgriffith$elm_ui$Element$link = F2(
 	function (attrs, _v0) {
@@ -14419,7 +14456,6 @@ var $author$project$View$mailToButton = function (attr) {
 		});
 };
 var $author$project$Color$gray = A3($mdgriffith$elm_ui$Element$rgb255, 211, 215, 207);
-var $elm$html$Html$Attributes$target = $elm$html$Html$Attributes$stringProperty('target');
 var $mdgriffith$elm_ui$Element$newTabLink = F2(
 	function (attrs, _v0) {
 		var url = _v0.dr;
@@ -14619,7 +14655,9 @@ var $author$project$View$footerEl = function (attr) {
 							{
 								bq: $mdgriffith$elm_ui$Element$text('PRIVACY POLICY'),
 								dr: 'https://www.lipsum.com/'
-							})
+							}),
+							A3($author$project$View$customNewTabLink, 'https://www.lipsum.com/', 'mobile test newtablink', _List_Nil),
+							A3($author$project$View$customLink, 'mailto:placeholder@example.com?subject=Subject&body=Body', 'mobile test link', _List_Nil)
 						]))
 				])));
 };
