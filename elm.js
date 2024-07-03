@@ -16305,124 +16305,27 @@ var $author$project$View$headerPhoneEl = F2(
 							[$mdgriffith$elm_ui$Element$alignRight]))
 					])));
 	});
-var $mdgriffith$elm_ui$Internal$Model$Left = 0;
-var $mdgriffith$elm_ui$Element$alignLeft = $mdgriffith$elm_ui$Internal$Model$AlignX(0);
-var $author$project$View$menuEl = F2(
-	function (model, attr) {
-		return A2(
-			$mdgriffith$elm_ui$Element$el,
-			_Utils_ap(
-				_List_fromArray(
-					[
-						$mdgriffith$elm_ui$Element$Background$color($author$project$Color$secondary),
-						$mdgriffith$elm_ui$Element$padding(15),
-						$mdgriffith$elm_ui$Element$width($mdgriffith$elm_ui$Element$fill),
-						$mdgriffith$elm_ui$Element$height($mdgriffith$elm_ui$Element$fill),
-						$mdgriffith$elm_ui$Element$alignRight
-					]),
-				attr),
-			A2(
-				$mdgriffith$elm_ui$Element$column,
-				_List_fromArray(
-					[
-						$mdgriffith$elm_ui$Element$width($mdgriffith$elm_ui$Element$fill),
-						$mdgriffith$elm_ui$Element$height($mdgriffith$elm_ui$Element$fill)
-					]),
-				_List_fromArray(
-					[
-						A3(
-						$author$project$View$menuButton,
-						'close',
-						model.bV,
-						_List_fromArray(
-							[
-								$mdgriffith$elm_ui$Element$alignRight,
-								$mdgriffith$elm_ui$Element$height(
-								$mdgriffith$elm_ui$Element$fillPortion(1))
-							])),
-						A2(
-						$mdgriffith$elm_ui$Element$el,
-						_List_fromArray(
-							[
-								$mdgriffith$elm_ui$Element$height(
-								$mdgriffith$elm_ui$Element$fillPortion(2))
-							]),
-						$mdgriffith$elm_ui$Element$none),
-						A3(
-						$author$project$View$headerButton,
-						'TOP',
-						'top',
-						_List_fromArray(
-							[
-								$mdgriffith$elm_ui$Element$alignLeft,
-								$mdgriffith$elm_ui$Element$height(
-								$mdgriffith$elm_ui$Element$fillPortion(4))
-							])),
-						A3(
-						$author$project$View$headerButton,
-						'SERVICE',
-						'service',
-						_List_fromArray(
-							[
-								$mdgriffith$elm_ui$Element$alignLeft,
-								$mdgriffith$elm_ui$Element$height(
-								$mdgriffith$elm_ui$Element$fillPortion(4))
-							])),
-						A3(
-						$author$project$View$headerButton,
-						'CONTACT',
-						'contact',
-						_List_fromArray(
-							[
-								$mdgriffith$elm_ui$Element$alignLeft,
-								$mdgriffith$elm_ui$Element$height(
-								$mdgriffith$elm_ui$Element$fillPortion(4))
-							]))
-					])));
-	});
 var $author$project$View$phoneLayout = function (model) {
 	var viewportHeight = A2($elm$core$Basics$composeL, $mdgriffith$elm_ui$Element$px, $elm$core$Basics$round)(model.Z.au.am);
-	var has_finished = function (start) {
-		return _Utils_eq(start, model.bV);
-	};
-	var movement = function (state) {
-		return has_finished(state) ? $mdgriffith$elm_animator$Animator$at(1) : $mdgriffith$elm_animator$Animator$at(0);
-	};
-	var opacity_ = A2($mdgriffith$elm_animator$Animator$move, model.aO, movement);
-	var alpha_ = function () {
-		var _v0 = model.bV;
-		if (_v0 === 1) {
-			return 1;
-		} else {
-			return 0;
-		}
-	}();
 	return A2(
 		$mdgriffith$elm_ui$Element$layout,
 		_List_fromArray(
 			[
 				$mdgriffith$elm_ui$Element$height($mdgriffith$elm_ui$Element$fill),
 				$mdgriffith$elm_ui$Element$width($mdgriffith$elm_ui$Element$fill),
-				$mdgriffith$elm_ui$Element$alpha(opacity_),
 				$mdgriffith$elm_ui$Element$inFront(
-				A2(
-					$author$project$View$menuEl,
-					model,
-					_List_fromArray(
-						[
-							$mdgriffith$elm_ui$Element$alpha(alpha_)
-						])))
+				A2($author$project$View$headerPhoneEl, model, _List_Nil))
 			]),
 		A2(
 			$mdgriffith$elm_ui$Element$column,
 			_List_fromArray(
 				[
 					$mdgriffith$elm_ui$Element$height($mdgriffith$elm_ui$Element$fill),
-					$mdgriffith$elm_ui$Element$width($mdgriffith$elm_ui$Element$fill)
+					$mdgriffith$elm_ui$Element$width($mdgriffith$elm_ui$Element$fill),
+					$mdgriffith$elm_ui$Element$Background$color($author$project$Color$bgPrimary)
 				]),
 			_List_fromArray(
 				[
-					A2($author$project$View$headerPhoneEl, model, _List_Nil),
 					$author$project$View$backGroundImageEl(
 					_List_fromArray(
 						[
