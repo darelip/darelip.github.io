@@ -16220,61 +16220,16 @@ var $author$project$View$desktopLayout = function (model) {
 					_List_fromArray(
 						[
 							$mdgriffith$elm_ui$Element$htmlAttribute(
-							$elm$html$Html$Attributes$id('contact'))
+							$elm$html$Html$Attributes$id('contact')),
+							$mdgriffith$elm_ui$Element$Font$size(14)
 						]))
 				])));
 };
 var $author$project$View$bigDesktopLayout = function (model) {
 	return $author$project$View$desktopLayout(model);
 };
-var $author$project$Types$Unwrapped = 1;
-var $author$project$Types$UserPressedMenu = function (a) {
-	return {$: 5, a: a};
-};
-var $author$project$View$menuButton = F3(
-	function (label_, currentMenuState, attr) {
-		var newMenuState = function () {
-			if (!currentMenuState) {
-				return 1;
-			} else {
-				return 0;
-			}
-		}();
-		return A2(
-			$mdgriffith$elm_ui$Element$Input$button,
-			_Utils_ap(
-				_List_fromArray(
-					[
-						$mdgriffith$elm_ui$Element$focused(_List_Nil),
-						$mdgriffith$elm_ui$Element$width(
-						$mdgriffith$elm_ui$Element$px(115)),
-						$mdgriffith$elm_ui$Element$height(
-						$mdgriffith$elm_ui$Element$px(40)),
-						$mdgriffith$elm_ui$Element$padding(10),
-						$mdgriffith$elm_ui$Element$Font$center,
-						$mdgriffith$elm_ui$Element$Border$widthEach(
-						{co: 2, cP: 0, dc: 0, dq: 0}),
-						$mdgriffith$elm_ui$Element$Border$color($author$project$Color$transparent),
-						$mdgriffith$elm_ui$Element$mouseDown(
-						_List_fromArray(
-							[
-								$mdgriffith$elm_ui$Element$Background$color($author$project$Color$secondary)
-							])),
-						$mdgriffith$elm_ui$Element$mouseOver(
-						_List_fromArray(
-							[
-								$mdgriffith$elm_ui$Element$Background$color($author$project$Color$white)
-							]))
-					]),
-				attr),
-			{
-				bq: $mdgriffith$elm_ui$Element$text(label_),
-				c1: $elm$core$Maybe$Just(
-					$author$project$Types$UserPressedMenu(newMenuState))
-			});
-	});
 var $author$project$View$headerPhoneEl = F2(
-	function (model, attr) {
+	function (_v0, attr) {
 		return A2(
 			$mdgriffith$elm_ui$Element$row,
 			_Utils_ap(
@@ -16291,9 +16246,9 @@ var $author$project$View$headerPhoneEl = F2(
 				[
 					$author$project$View$logo,
 					A3(
-					$author$project$View$menuButton,
-					'Menu',
-					model.bU,
+					$author$project$View$headerButton,
+					'CONTACT',
+					'contact',
 					_List_fromArray(
 						[$mdgriffith$elm_ui$Element$alignRight]))
 				]));
@@ -16456,6 +16411,8 @@ var $author$project$View$phoneLayout = function (model) {
 					$author$project$View$footerEl(
 					_List_fromArray(
 						[
+							$mdgriffith$elm_ui$Element$htmlAttribute(
+							$elm$html$Html$Attributes$id('contact')),
 							$mdgriffith$elm_ui$Element$Font$size(12)
 						]))
 				])));
