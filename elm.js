@@ -14286,6 +14286,16 @@ var $mdgriffith$elm_ui$Element$Border$rounded = function (radius) {
 			'border-radius',
 			$elm$core$String$fromInt(radius) + 'px'));
 };
+var $mdgriffith$elm_ui$Internal$Model$FontSize = function (a) {
+	return {$: 2, a: a};
+};
+var $mdgriffith$elm_ui$Internal$Flag$fontSize = $mdgriffith$elm_ui$Internal$Flag$flag(4);
+var $mdgriffith$elm_ui$Element$Font$size = function (i) {
+	return A2(
+		$mdgriffith$elm_ui$Internal$Model$StyleClass,
+		$mdgriffith$elm_ui$Internal$Flag$fontSize,
+		$mdgriffith$elm_ui$Internal$Model$FontSize(i));
+};
 var $mdgriffith$elm_ui$Element$text = function (content) {
 	return $mdgriffith$elm_ui$Internal$Model$Text(content);
 };
@@ -14315,6 +14325,7 @@ var $author$project$View$mailToButton = function (attr) {
 					$mdgriffith$elm_ui$Element$focused(_List_Nil),
 					A2($mdgriffith$elm_ui$Element$paddingXY, 0, 20),
 					$mdgriffith$elm_ui$Element$Font$center,
+					$mdgriffith$elm_ui$Element$Font$size(18),
 					$mdgriffith$elm_ui$Element$Border$width(2),
 					$mdgriffith$elm_ui$Element$Border$rounded(3),
 					$mdgriffith$elm_ui$Element$mouseDown(
@@ -14981,15 +14992,11 @@ var $mdgriffith$elm_ui$Internal$Model$FontFamily = F2(
 	function (a, b) {
 		return {$: 1, a: a, b: b};
 	});
-var $mdgriffith$elm_ui$Internal$Model$FontSize = function (a) {
-	return {$: 2, a: a};
-};
 var $mdgriffith$elm_ui$Internal$Model$SansSerif = {$: 1};
 var $mdgriffith$elm_ui$Internal$Model$Typeface = function (a) {
 	return {$: 3, a: a};
 };
 var $mdgriffith$elm_ui$Internal$Flag$fontFamily = $mdgriffith$elm_ui$Internal$Flag$flag(5);
-var $mdgriffith$elm_ui$Internal$Flag$fontSize = $mdgriffith$elm_ui$Internal$Flag$flag(4);
 var $elm$core$String$toLower = _String_toLower;
 var $elm$core$String$words = _String_words;
 var $mdgriffith$elm_ui$Internal$Model$renderFontClassName = F2(
@@ -15921,12 +15928,6 @@ var $author$project$View$imageMock = function (attr) {
 			$mdgriffith$elm_ui$Element$text('IMAGE')));
 };
 var $author$project$View$serviceParagraph = $mdgriffith$elm_ui$Element$text('Write something here to explain about our service!');
-var $mdgriffith$elm_ui$Element$Font$size = function (i) {
-	return A2(
-		$mdgriffith$elm_ui$Internal$Model$StyleClass,
-		$mdgriffith$elm_ui$Internal$Flag$fontSize,
-		$mdgriffith$elm_ui$Internal$Model$FontSize(i));
-};
 var $author$project$View$serviceAbstructDesktop = A2(
 	$mdgriffith$elm_ui$Element$column,
 	_List_fromArray(
