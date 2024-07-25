@@ -15117,7 +15117,7 @@ var $author$project$View$leftSideParagraphEl = F3(
 				_List_fromArray(
 					[
 						$mdgriffith$elm_ui$Element$width($mdgriffith$elm_ui$Element$fill),
-						$mdgriffith$elm_ui$Element$Background$image('https://picsum.photos/seed/c/2000/1400')
+						$mdgriffith$elm_ui$Element$Background$image('../assets/image/service_details1.jpg')
 					]),
 				attr),
 			A2(
@@ -15869,7 +15869,7 @@ var $author$project$View$rightSideParagraphEl = F3(
 				_List_fromArray(
 					[
 						$mdgriffith$elm_ui$Element$width($mdgriffith$elm_ui$Element$fill),
-						$mdgriffith$elm_ui$Element$Background$image('https://picsum.photos/seed/d/2000/1400'),
+						$mdgriffith$elm_ui$Element$Background$image('../assets/image/service_details2.jpg'),
 						$mdgriffith$elm_ui$Element$Background$color($author$project$Color$accent)
 					]),
 				attr),
@@ -16047,7 +16047,7 @@ var $author$project$View$serviceAbstructEl = F2(
 				_List_fromArray(
 					[
 						$mdgriffith$elm_ui$Element$width($mdgriffith$elm_ui$Element$fill),
-						$mdgriffith$elm_ui$Element$Background$image('https://picsum.photos/seed/b/2000/1400'),
+						$mdgriffith$elm_ui$Element$Background$image('../assets/image/service_abstract.jpg'),
 						$mdgriffith$elm_ui$Element$Background$color($author$project$Color$bgPrimary),
 						$mdgriffith$elm_ui$Element$Region$mainContent
 					]),
@@ -16119,7 +16119,7 @@ var $author$project$View$topTileEl = F3(
 					[
 						$mdgriffith$elm_ui$Element$width($mdgriffith$elm_ui$Element$fill),
 						$mdgriffith$elm_ui$Element$height($mdgriffith$elm_ui$Element$fill),
-						$mdgriffith$elm_ui$Element$Background$image('https://picsum.photos/seed/a/2000/1400'),
+						$mdgriffith$elm_ui$Element$Background$image('../assets/image/top_image.png'),
 						$mdgriffith$elm_ui$Element$htmlAttribute(
 						$elm$html$Html$Attributes$id('top'))
 					]),
